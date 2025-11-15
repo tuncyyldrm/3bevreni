@@ -133,9 +133,14 @@
   async function loadGallery() {
     try {
       const container = document.getElementById('gallery-container');
-      // Sunucu tarafı ile klasördeki tüm jpg dosyalarını oku (Node.js veya Python kullanılır)
-      const response = await fetch('/gallery'); // /list-gallery, server tarafında klasör tarayıp JSON döndürmeli
-      const images = await response.json();
+      const images = [
+        "urun1.jpg",
+        "urun2.jpg",
+        "urun3.jpg",
+        "urun4.jpg",
+        "urun5.jpg",
+        "urun6.jpg"
+      ];
       images.forEach(img => {
         const el = document.createElement('img');
         el.src = `gallery/${img}`;

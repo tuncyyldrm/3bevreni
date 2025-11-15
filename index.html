@@ -2,128 +2,135 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-	<!-- Viewport meta etiketini güncelleyin -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
-		<!-- Mobil dokunmatik özellikleri -->
-	<meta name="theme-color" content="#ffffff">
-	<link rel="sitemap" type="application/xml" href="https://3bevreni.vercel.app/sitemap.xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- SEO Meta -->
+    <title>3B Evreni | Özel 3D Baskı Araba Modelleri, Figürler ve Ev Dekorları</title>
+    <meta name="description" content="3B Evreni ile kişiye özel 3D baskı deneyimi! Araba modelleri, koleksiyon figürleri ve ev dekorları için kaliteli ve özel tasarım 3D baskı ürünlerini keşfet.">
+    <meta name="keywords" content="3d baskı, özel tasarım 3d, 3d araba modeli, 3d figür, kişiye özel hediye, 3d dekor, 3d baskı Isparta">
+    <meta name="author" content="3B Evreni - Tuncay Yıldırım">
+    <meta name="publisher" content="3B Evreni - Tuncay Yıldırım">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    
+    <!-- Local SEO -->
+    <meta name="geo.region" content="TR-32" />
+    <meta name="geo.placename" content="Isparta" />
+    <meta name="geo.position" content="37.756470; 30.566073" />
+    <meta name="ICBM" content="37.756470, 30.566073" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://3bevreni.vercel.app/">
     <script>
-        // Sayfa URL'sini al
         let pageUrl = window.location.href;
-
-        // Canonical link etiketini bul ve güncelle
         let canonicalLink = document.querySelector('link[rel="canonical"]');
         if (canonicalLink) {
             canonicalLink.setAttribute('href', pageUrl);
         } else {
-            // Canonical link yoksa, yeni bir tane ekle
             let newCanonical = document.createElement('link');
             newCanonical.setAttribute('rel', 'canonical');
             newCanonical.setAttribute('href', pageUrl);
             document.head.appendChild(newCanonical);
         }
     </script>
-
-	<meta http-equiv="X-Content-Type-Options" content="nosniff">
-
-	<!-- Mevcut meta etiketlerin güncellenmiş hali -->
-	<meta name="description" content="3B Evreni - Özel tasarım 3D baskı araba modelleri, koleksiyonluk figürler ve ev dekor ürünleri. Yüksek kaliteli kişiye özel 3D baskı çözümleri ile benzersiz ürünler.">
-	<meta name="keywords" content="3d baskı, 3d yazıcı, özel tasarım araba modeli, koleksiyon figürü, 3d ev dekorasyonu, kişiye özel hediye, 3d baskı Isparta, 3d figür fiyatları">
-
-	<!-- Yeni eklenen meta etiketler -->
-	<meta name="geo.region" content="TR-32" />
-	<meta name="geo.placename" content="Isparta" />
-	<meta name="geo.position" content="37.756470; 30.566073" />
-	<meta name="ICBM" content="37.756470, 30.566073" />
-	
-    <meta name="author" content="3B Evreni - Tuncay Yıldırım">  
-    <meta name="publisher" content="3B Evreni - Tuncay Yıldırım">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-
-    <link rel="icon" type="image/jpeg" href="https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg">
-	
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
     <meta property="og:url" content="https://3bevreni.vercel.app/">
     <meta property="og:title" content="3B Evreni - Özel 3D Baskı Ürünleri">
     <meta property="og:description" content="Araba modelleri, figürler ve ev dekorları için kaliteli 3D baskı çözümleri.">
     <meta property="og:image" content="https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg">
-
+    
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://3bevreni.vercel.app/">
     <meta property="twitter:title" content="3B Evreni - Özel 3D Baskı Ürünleri">
     <meta property="twitter:description" content="Araba modelleri, figürler ve ev dekorları için kaliteli 3D baskı çözümleri.">
     <meta property="twitter:image" content="https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg">
-
-    <title>3B Evreni Hayal et → Tasarla → Üret! Kişiye özel 3D baskı dünyası.</title>
     
-    <!-- Preload önemli kaynaklar -->
+    <!-- Preload -->
     <link rel="preload" href="https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg" as="image">
     <link rel="preconnect" href="https://sheets.googleapis.com">
     <link rel="dns-prefetch" href="https://sheets.googleapis.com">
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CW05QPYXS3"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-CW05QPYXS3');
-	</script>
-		
-	<!-- WebSite Schema -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "WebSite",
-	  "name": "3B Evreni",
-	  "url": "https://3bevreni.vercel.app",
-	  "potentialAction": {
-		"@type": "SearchAction",
-		"target": "https://3bevreni.vercel.app?search={search_term_string}",
-		"query-input": "required name=search_term_string"
-	  }
-	}
-	</script>
-
-	<!-- BreadcrumbList Schema -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "BreadcrumbList",
-	  "itemListElement": [
-		{
-		  "@type": "ListItem",
-		  "position": 1,
-		  "name": "Ana Sayfa",
-		  "item": "https://3bevreni.vercel.app"
-		},
-		{
-		  "@type": "ListItem",
-		  "position": 2,
-		  "name": "Ürünler",
-		  "item": "https://3bevreni.vercel.app/urunler"
-		}
-	  ]
-	}
-	</script>
-
-	<!-- Organization Schema -->
-	<script type="application/ld+json">
-	{
-	  "@context": "https://schema.org",
-	  "@type": "Organization",
-	  "name": "3B Evreni",
-	  "url": "https://3bevreni.vercel.app",
-	  "logo": "https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg",
-	  "sameAs": [
-		"https://www.instagram.com/3bevreni",
-		"https://www.facebook.com/3bevreni"
-	  ]
-	}
-	</script>
+    
+    <!-- Google Analytics / GTAG -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW05QPYXS3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CW05QPYXS3');
+    </script>
+    
+    <!-- Schema.org: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "3B Evreni",
+      "url": "https://3bevreni.vercel.app",
+      "publisher": {
+        "@type": "Organization",
+        "name": "3B Evreni",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg"
+        }
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://3bevreni.vercel.app?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Schema.org: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ana Sayfa",
+          "item": "https://3bevreni.vercel.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ürünler",
+          "item": "https://3bevreni.vercel.app/urunler"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Schema.org: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "3B Evreni",
+      "url": "https://3bevreni.vercel.app",
+      "logo": "https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg",
+      "sameAs": [
+        "https://www.instagram.com/3bevreni",
+        "https://www.facebook.com/3bevreni"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+90-xxx-xxx-xxxx",
+        "contactType": "customer service",
+        "areaServed": "TR"
+      }
+    }
+    </script>
   <style>
     :root {
       --bg: #1a1a1a;

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3B Evreni | 3D Baskı Dünyası</title>
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --card: #2a2a2a;
+      --accent: #ff7a00;
+      --accent-light: #ffa552;
+      --text-light: #e6e6e6;
+      --text-dim: #b5b5b5;
+      --max-width: 1200px;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5f5f5;
+      --card: #ffffff;
+      --accent: #ff7a00;
+      --accent-light: #ffb36b;
+      --text-light: #1a1a1a;
+      --text-dim: #4d4d4d;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-light);
+    }
+
+    nav {
+      background: var(--card);
+      color: var(--text-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    nav .menu a { margin-left: 20px; color: var(--text-light); text-decoration: none; font-size: 1rem; transition: 0.2s; }
+    nav .menu a:hover { color: var(--accent); }
+
+    .hero { text-align: center; padding: 80px 20px; max-width: var(--max-width); margin: auto; }
+    .hero h1 { font-size: 3rem; font-weight: 800; }
+    .hero p { font-size: 1.2rem; color: var(--text-dim); margin-top: 10px; }
+
+    .section { max-width: var(--max-width); margin: 60px auto; padding: 0 20px; }
+    .section-title { font-size: 2rem; font-weight: 600; border-left: 6px solid var(--accent); padding-left: 12px; margin-bottom: 25px; }
+    .box { background: var(--card); padding: 25px; border-radius: 12px; border: 1px solid #262626; line-height: 1.7; font-size: 1.05rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+    .card { background: var(--card); padding: 25px 20px; border-radius: 12px; border: 1px solid #262626; text-align: center; font-size: 1.1rem; transition: 0.25s; }
+    .card:hover { transform: translateY(-6px); border-color: var(--accent); }
+
+    .btn { display: inline-block; margin-top: 15px; padding: 12px 22px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; border-radius: 8px; transition: 0.2s; }
+    .btn:hover { opacity: 0.85; }
+
+    footer { text-align: center; padding: 40px 10px; color: var(--text-dim); border-top: 1px solid #222; margin-top: 60px; font-size: 0.95rem; }
+
+    .gallery { padding: 2rem; max-width: var(--max-width); margin: auto; }
+    .gallery h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--text-light); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+    .gallery-grid img { width: 100%; border-radius: 10px; object-fit: cover; }
+  </style>
+</head>
+<body data-theme="dark">
+
+<nav>
+  <div class="logo">3B Evreni</div>
+  <div class="menu">
+    <a href="#hakkinda">Hakkında</a>
+    <a href="#alanlar">Alanlar</a>
+    <a href="#satis">Satış</a>
+    <a href="#iletisim">İletişim</a>
+  </div>
+  <button id="themeToggle" style="margin-left:20px;padding:8px 14px;border:none;border-radius:6px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;">Mod Değiştir</button>
+</nav>
+
+<section class="hero">
+  <h1>3D Baskı Dünyasına Hoş Geldin</h1>
+  <p>Tasarım, üretim, hobi ve ilham bir arada.</p>
+</section>
+
+<section class="section" id="hakkinda">
+  <h2 class="section-title">Hakkında</h2>
+  <div class="box">
+    3B Evreni; 3D baskıya ilgi duyan herkese yönelik bir rehber, ilham kaynağı ve proje merkezidir.
+    Tasarımlar, baskı ipuçları ve maker projeleriyle hem yeni başlayanlara hem de deneyimlilere hitap eder.
+    Yeni fikirlerin varsa her zaman paylaşabilirsin; birlikte üretmek için buradayız.
+  </div>
+</section>
+
+<section class="section" id="alanlar">
+  <h2 class="section-title">Öne Çıkan Alanlar</h2>
+  <div class="grid">
+    <div class="card">3D Model Tasarımları</div>
+    <div class="card">Baskı Teknikleri & İpuçları</div>
+    <div class="card">Maker Projeleri</div>
+    <div class="card">Topluluk Katkıları</div>
+  </div>
+</section>
+
+<section class="section" id="iletisim">
+  <h2 class="section-title">İletişim</h2>
+  <div class="box">
+    Proje fikrin mi var? İş birliği mi yapmak istiyorsun? Bana ulaşabilirsin.
+    <br><br>
+    <a class="btn" href="https://instagram.com/3bevreni" target="_blank">Instagram Profiline Git</a>
+  </div>
+</section>
+
+<section class="section" id="satis">
+  <h2 class="section-title">Satış & Mağaza</h2>
+  <div class="box">
+    3B Evreni ürünlerini güvenli ödeme altyapısıyla satın almak için aşağıdaki bağlantıyı kullanabilirsin.
+    <br><br>
+    <a class="btn" href="https://www.shopier.com/3bevreni" target="_blank">Satış Sayfasına Git</a>
+  </div>
+</section>
+
+<section class="gallery" id="galeri">
+  <h2>Galeri</h2>
+  <div id="gallery-container" class="gallery-grid"></div>
+</section>
+
+<footer>
+  © 2025 3B Evreni – Profesyonel 3D Baskı ve Tasarım Platformu
+</footer>
+
+<script>
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+  });
+
+  async function loadGallery() {
+    try {
+      const response = await fetch('/gallery');
+      const images = await response.json();
+      const container = document.getElementById('gallery-container');
+      images.forEach(img => {
+        const el = document.createElement('img');
+        el.src = `/gallery/${img}`;
+        container.appendChild(el);
+      });
+    } catch (e) {
+      console.error('Galeri yüklenemedi:', e);
+    }
+  }
+  loadGallery();
+</script>
+
+</body>
+</html>

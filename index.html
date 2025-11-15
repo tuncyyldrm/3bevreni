@@ -31,17 +31,46 @@
       color: var(--text-light);
     }
 
-    nav { background: var(--card); color: var(--text-light); display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+    nav {
+      background: var(--card);
+      color: var(--text-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
     nav .logo { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
-    nav .menu a { margin-left: 20px; color: var(--text-light); text-decoration: none; font-size: 1rem; transition: 0.2s; }
+    nav .menu { display: flex; gap: 20px; }
+    nav .menu a { color: var(--text-light); text-decoration: none; font-size: 1rem; transition: 0.2s; }
     nav .menu a:hover { color: var(--accent); }
+    nav .menu-toggle { display: none; background: var(--accent); border: none; color: #fff; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+
+    #themeToggle {
+      background: linear-gradient(135deg, #ff7a00, #ffa552);
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    #themeToggle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
 
     .hero {
       text-align: center;
       padding: 80px 20px;
       max-width: var(--max-width);
       margin: auto;
-      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/3d-printer.webp');
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/3d-printer.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -73,6 +102,9 @@
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 1rem; }
       .grid { grid-template-columns: 1fr; }
+      nav .menu { display: none; flex-direction: column; width: 100%; background: var(--card); position: absolute; top: 100%; left: 0; padding: 1rem 0; }
+      nav .menu.active { display: flex; }
+      nav .menu-toggle { display: block; }
     }
   </style>
 </head>
@@ -80,13 +112,14 @@
 
 <nav>
   <div class="logo">3B Evreni</div>
+  <button class="menu-toggle">☰</button>
   <div class="menu">
     <a href="#hakkinda">Hakkında</a>
     <a href="#alanlar">Alanlar</a>
     <a href="#satis">Satış</a>
     <a href="#iletisim">İletişim</a>
   </div>
-  <button id="themeToggle" style="margin-left:20px;padding:8px 14px;border:none;border-radius:6px;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;">Mod Değiştir</button>
+  <button id="themeToggle">🌙 / ☀️</button>
 </nav>
 
 <section class="hero">
@@ -145,6 +178,12 @@
   toggle.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
     document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+  });
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('nav .menu');
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
   });
 
   function loadGallery() {

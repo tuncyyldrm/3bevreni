@@ -36,9 +36,19 @@
     nav .menu a { margin-left: 20px; color: var(--text-light); text-decoration: none; font-size: 1rem; transition: 0.2s; }
     nav .menu a:hover { color: var(--accent); }
 
-    .hero { text-align: center; padding: 80px 20px; max-width: var(--max-width); margin: auto; }
-    .hero h1 { font-size: 3rem; font-weight: 800; }
-    .hero p { font-size: 1.2rem; color: var(--text-dim); margin-top: 10px; }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      max-width: var(--max-width);
+      margin: auto;
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/3d-printer.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); }
+    .hero p { font-size: 1.1rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); margin-top: 10px; }
 
     .section { max-width: var(--max-width); margin: 60px auto; padding: 0 20px; }
     .section-title { font-size: 2rem; font-weight: 600; border-left: 6px solid var(--accent); padding-left: 12px; margin-bottom: 25px; }
@@ -55,8 +65,15 @@
 
     .gallery { padding: 2rem; max-width: var(--max-width); margin: auto; }
     .gallery h2 { font-size: 2rem; margin-bottom: 1rem; color: var(--text-light); }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
-    .gallery-grid img { width: 100%; border-radius: 10px; object-fit: cover; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; }
+    .gallery-grid img { width: 100%; border-radius: 10px; object-fit: cover; transition: transform 0.3s; }
+    .gallery-grid img:hover { transform: scale(1.05); }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body data-theme="dark">
@@ -130,25 +147,17 @@
     document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
   });
 
-  async function loadGallery() {
-    try {
-      const container = document.getElementById('gallery-container');
-      const images = [
-        "urun1.jpg",
-        "urun2.jpg",
-        "urun3.jpg",
-        "urun4.jpg",
-        "urun5.jpg",
-        "urun6.jpg"
-      ];
-      images.forEach(img => {
-        const el = document.createElement('img');
-        el.src = `gallery/${img}`;
-        container.appendChild(el);
-      });
-    } catch (e) {
-      console.error('Galeri yüklenemedi:', e);
+  function loadGallery() {
+    const container = document.getElementById('gallery-container');
+    const images = [];
+    for (let i = 1; i <= 6; i++) {
+      images.push(`urun${i}.jpg`);
     }
+    images.forEach(img => {
+      const el = document.createElement('img');
+      el.src = `gallery/${img}`;
+      container.appendChild(el);
+    });
   }
   loadGallery();
 </script>

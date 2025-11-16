@@ -6,8 +6,8 @@
     <meta name="theme-color" content="#ffffff">
     
     <!-- SEO Meta -->
-    <title>3B Evreni | Özel 3D Baskı Araba Modelleri, Figürler ve Ev Dekorları</title>
-    <meta name="description" content="3B Evreni ile kişiye özel 3D baskı deneyimi! Araba modelleri, koleksiyon figürleri ve ev dekorları için kaliteli ve özel tasarım 3D baskı ürünlerini keşfet.">
+    <title>3B Evreni | 3D Baskı Hizmeti, Kişiye Özel Tasarımlar, Araba Modelleri & Figür Üretimi</title>
+    <meta name="description" content="3B Evreni – Isparta merkez 3D baskı hizmeti. Kişiye özel araba modelleri, figürler, dekor ürünleri ve hızlı üretim. Türkiye geneli güvenli teslimat ve özel tasarım desteği.">
     <meta name="keywords" content="3d baskı, özel tasarım 3d, 3d araba modeli, 3d figür, kişiye özel hediye, 3d dekor, 3d baskı Isparta">
     <meta name="author" content="3B Evreni - Tuncay Yıldırım">
     <meta name="publisher" content="3B Evreni - Tuncay Yıldırım">
@@ -24,24 +24,13 @@
     
     <!-- Canonical -->
     <link rel="canonical" href="https://3bevreni.vercel.app/">
-    <script>
-        let pageUrl = window.location.href;
-        let canonicalLink = document.querySelector('link[rel="canonical"]');
-        if (canonicalLink) {
-            canonicalLink.setAttribute('href', pageUrl);
-        } else {
-            let newCanonical = document.createElement('link');
-            newCanonical.setAttribute('rel', 'canonical');
-            newCanonical.setAttribute('href', pageUrl);
-            document.head.appendChild(newCanonical);
-        }
-    </script>
+
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="tr_TR">
     <meta property="og:url" content="https://3bevreni.vercel.app/">
-    <meta property="og:title" content="3B Evreni - Özel 3D Baskı Ürünleri">
+    <meta property="og:title" content="3B Evreni – Özel 3D Baskı Araba Modelleri ve Figür Üretimi">
     <meta property="og:description" content="Araba modelleri, figürler ve ev dekorları için kaliteli 3D baskı çözümleri.">
     <meta property="og:image" content="https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg">
     
@@ -125,12 +114,37 @@
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+90-xxx-xxx-xxxx",
+        "telephone": "+90-531-208-4897",
         "contactType": "customer service",
         "areaServed": "TR"
       }
     }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "LocalBusiness",
+      "name": "3B Evreni",
+      "image": "https://cdn.shopier.app/logo_468/3bevreni_0acf1ed21753a6db010cf388af3ead50.jpg",
+      "@id": "https://3bevreni.vercel.app",
+      "url": "https://3bevreni.vercel.app",
+      "telephone": "+905312084897",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Isparta",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.756470,
+        "longitude": 30.566073
+      },
+      "areaServed": "Türkiye",
+      "priceRange": "$$"
+    }
+    </script>
+
   <style>
     :root {
       --bg: #1a1a1a;
@@ -225,6 +239,14 @@
     .gallery-grid img { width: 100%; border-radius: 10px; object-fit: cover; transition: transform 0.3s; }
     .gallery-grid img:hover { transform: scale(1.05); }
 
+    #blog-container .card img { width: 100%; border-radius: 12px; object-fit: cover; transition: transform 0.3s;}
+    #blog-container .card img:hover { transform: scale(1.05);}
+    /* Modal CSS */
+    .modal {  position: fixed;  top: 0;  left: 0;  width: 100%;  height: 100%;  background: rgba(0,0,0,0.7);  display: flex;  align-items: center;  justify-content: center;  z-index: 2000;}
+    .modal-content {  background: var(--card);  padding: 25px;  border-radius: 12px;  max-width: 600px;  width: 90%;  max-height: 80%; overflow-y: auto; position: relative;}
+    .modal-content h2 { margin-top: 0; }
+    .modal-content button {  position: absolute;  top: 10px;  right: 10px;  background: var(--accent);  color: #fff;  border: none;  border-radius: 6px;  padding: 6px 12px;  cursor: pointer;}
+
     @media (max-width: 768px) {
       .hero h1 { font-size: 2rem; }
       .hero p { font-size: 1rem; }
@@ -239,7 +261,7 @@
 
 <nav>
   <div class="logo">3B Evreni</div>
-  <button class="menu-toggle">☰</button>
+  <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">☰</button>
   <div class="menu">
     <a href="#hakkinda">Hakkında</a>
     <a href="#alanlar">Alanlar</a>
@@ -253,6 +275,7 @@
 <section class="hero">
   <h1>3D Baskı Dünyasına Hoş Geldin</h1>
   <p>Tasarım, üretim, hobi ve ilham bir arada.</p>
+  <p>Isparta merkez 3D baskı hizmeti – özel tasarım araba modelleri, figürler ve kişiye özel üretimler.</p>
 </section>
 
 <section class="section" id="hakkinda">
@@ -261,6 +284,8 @@
     3B Evreni; 3D baskıya ilgi duyan herkese yönelik bir rehber, ilham kaynağı ve proje merkezidir.
     Tasarımlar, baskı ipuçları ve maker projeleriyle hem yeni başlayanlara hem de deneyimlilere hitap eder.
     Yeni fikirlerin varsa her zaman paylaşabilirsin; birlikte üretmek için buradayız.
+    Dilersen <a href="#galeri">galeri</a> bölümünden örnek baskıları inceleyebilirsin.
+
   </div>
 </section>
 
@@ -296,8 +321,17 @@
 </section>
 
 <section class="section" id="galeri">
-  <h2 class="section-title">Galeri</h2><div class="box">
-  <div id="gallery-container" class="gallery-grid"></div></div>
+  <h2 class="section-title">Galeri – 3D Baskı Örnek Çalışmalar</h2>
+  <div class="box">
+    <div id="gallery-container" class="gallery-grid"></div>
+  </div>
+</section>
+
+<section class="section" id="blog">
+  <h2 class="section-title">Blog – 3D Baskı Rehberi</h2>
+  <div class="box">
+    <div id="blog-container" class="grid"></div>
+  </div>
 </section>
 
 <footer>
@@ -305,34 +339,99 @@
 </footer>
 
 <script>
+  // Tema değişimi
   const toggle = document.getElementById('themeToggle');
   toggle.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme');
     document.documentElement.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
   });
 
+  // Menü toggle
   const menuToggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('nav .menu');
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active');
   });
 
+  // Galeri yükleme
   function loadGallery() {
     const container = document.getElementById('gallery-container');
-    const images = [];
     for (let i = 1; i <= 7; i++) {
-      images.push(`urun${i}.jpg`);
+      const img = document.createElement('img');
+      img.loading = "lazy";
+      img.src = `gallery/urun${i}.jpg`;
+      img.alt = `3B Evreni 3D Baskı Ürün – urun${i}`;
+      container.appendChild(img);
     }
-    images.forEach(img => {
-      const el = document.createElement('img');
-      el.src = `gallery/${img}`;
-      container.appendChild(el);
-    });
   }
   loadGallery();
-</script>
 
+  // Blog yükleme ve modal
+  function loadBlog() {
+    const blogPosts = [
+      { title: "3D Baskıya Başlangıç Rehberi", img: "blog1.jpg", content: "Bu yazıda 3D baskıya başlamak için temel bilgiler verilmektedir..." },
+      { title: "Özel Araba Modeli Tasarlamak", img: "blog2.jpg", content: "Kendi araba modelinizi tasarlamak için adım adım rehber..." },
+      { title: "Figür Baskısı için İpuçları", img: "blog3.jpg", content: "Figür baskısı yaparken dikkat edilmesi gerekenler..." },
+      { title: "Maker Projeleri ile İlham", img: "blog4.jpg", content: "Maker projeleriyle yaratıcılığınızı geliştirin..." }
+    ];
+
+    const container = document.getElementById('blog-container');
+
+    blogPosts.forEach(post => {
+      const el = document.createElement('div');
+      el.classList.add('card');
+      el.innerHTML = `
+        <img src="blog/${post.img}" alt="${post.title}" loading="lazy" />
+        <h3>${post.title}</h3>
+        <a href="#" class="btn">Devamını Oku</a>
+      `;
+      container.appendChild(el);
+
+      const btn = el.querySelector('.btn');
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Modal oluştur
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `
+          <div class="modal-content">
+            <h2>${post.title}</h2>
+            <p>${post.content}</p>
+            <button id="closeModal">Kapat</button>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden';
+
+        // Kapat butonu
+        modal.querySelector('#closeModal').addEventListener('click', () => {
+          modal.remove();
+          document.body.style.overflow = '';
+        });
+
+        // Modal dışına tıkla kapatma
+        modal.addEventListener('click', e => {
+          if(e.target === modal) {
+            modal.remove();
+            document.body.style.overflow = '';
+          }
+        });
+
+        // Escape ile kapatma
+        const escListener = (e) => {
+          if(e.key === 'Escape') {
+            modal.remove();
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', escListener);
+          }
+        };
+        document.addEventListener('keydown', escListener);
+      });
+    });
+  }
+
+  loadBlog();
+</script>
 </body>
 </html>
-
-

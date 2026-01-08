@@ -2,5 +2,6 @@ User-agent: *
 Disallow: /admin/
 Disallow: /private/
 Allow: /public/
-Sitemap: https://3bevreni.com/sitemap.xml
+Sitemap: https://memonex3d.com/sitemap.xml
+
 

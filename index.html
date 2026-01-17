@@ -597,10 +597,13 @@
     <p>
       Isparta merkez 3D baskı hizmeti — özel tasarım araba modelleri, figürler ve tek adet üretimler.
     </p>
-    <a class="btn" href="https://wa.me/905312084897?text=Merhaba,%20özel%203D%20baskı%20siparişi%20vermek%20istiyorum."
-      target="_blank" onclick="trackWhatsAppClick('hero','ana_buton'); setTimeout(() => {}, 150);">
-      Modelini Gönder, Fiyat Al
-    </a>
+<a class="btn"
+   rel="noopener noreferrer"
+   href="https://wa.me/905312084897?text=Merhaba,%20özel%203D%20baskı%20siparişi%20vermek%20istiyorum."
+   target="_blank"
+   onclick="trackWhatsAppClick('hero','ana_buton')">
+  Modelini Gönder, Fiyat Al
+</a>
     <p style="margin-top:10px;font-size:0.95rem;opacity:0.9;">
       Tek adet üretim • Hızlı geri dönüş • Türkiye geneli kargo
     </p>
@@ -669,37 +672,30 @@
     <div class="box">
       Proje fikrin mi var? İş birliği mi yapmak istiyorsun? Bana ulaşabilirsin.
       <br><br>
-      <a class="btn" href="https://instagram.com/memonex3d" target="_blank">Instagram</a>
-      <a class="btn" href="https://tiktok.com/@memonex3d" target="_blank">Tiktok</a>
-      <a class="btn" href="https://wa.me/905312084897" target="_blank">WhatsApp</a>
+      <a class="btn" rel="nofollow noopener" href="https://instagram.com/memonex3d" target="_blank">Instagram</a>
+      <a class="btn" rel="nofollow noopener" href="https://tiktok.com/@memonex3d" target="_blank">Tiktok</a>
+      <a class="btn" rel="nofollow noopener" href="https://wa.me/905312084897" target="_blank">WhatsApp</a>
     </div>
   </section>
 
-  <section class="section" id="blog">
-    <h2 class="section-title">Blog – 3D Baskı Rehberi</h2>
-    <div class="box">
-      <article style="margin-bottom:20px;">
-        <h3>Isparta’da 3D Baskı Hizmeti</h3>
-        <p>
-          Isparta merkezli Memonex, tek adet ve özel üretim 3D baskı hizmetleri sunar.
-          Araba modelleri, figürler ve kişiye özel tasarımlar için hızlı ve net çözümler üretir.
-        </p>
-        <ul>
-          <li>Tek adet 3D baskı</li>
-          <li>Özel araba modeli üretimi</li>
-          <li>Figür ve yedek parça baskısı</li>
-        </ul>
-        <p>
-          3D baskı fiyatı, süre ve malzeme seçimi hakkında net bilgi almak için
-          <a href="https://wa.me/905312084897" target="_blank">
-            WhatsApp’tan doğrudan yazabilirsin
-          </a>.
-        </p>
-      </article>
-    </div>
-  </section>
+<section class="section" id="blog">
+  <h2 class="section-title">Isparta 3D Baskı Rehberi</h2>
+  <div class="box">
+    <article>
+      <h3>Neden 3D Baskı Tercih Etmelisiniz?</h3>
+      <p>
+        <strong>Isparta 3D baskı</strong> çözümleri, geleneksel üretim yöntemlerine göre çok daha hızlı ve ekonomiktir. 
+        Memonex olarak, <em>PLA, PETG ve ABS</em> gibi dayanıklı malzemeler kullanarak ihtiyacınıza özel prototipler üretiyoruz.
+      </p>
+      <p>
+        Özellikle <strong>kişiye özel figür tasarımı</strong> ve <strong>araba parçaları</strong> üretiminde Isparta'da öncü hizmet veriyoruz. 
+        Tek adet üretim seçeneğimiz sayesinde, kalıp maliyetine girmeden hayalinizdeki projeyi gerçeğe dönüştürebilirsiniz.
+      </p>
+    </article>
+  </div>
+</section>
 
-  <a href="https://wa.me/905312084897" class="whatsapp-float" target="_blank"
+  <a rel="nofollow noopener" href="https://wa.me/905312084897" class="whatsapp-float" target="_blank"
     onclick="trackWhatsAppClick('floating_button', 'sabit_whatsapp')">
     Fiyat Al
   </a>
@@ -710,7 +706,7 @@
     <strong style="display:block;margin-bottom:10px;">
       Özel 3D baskı ihtiyacın mı var?
     </strong>
-    <a class="btn" href="https://wa.me/905312084897?text=Merhaba,%20acil%203D%20baskı%20ihtiyacım%20var."
+    <a class="btn" rel="nofollow noopener" href="https://wa.me/905312084897?text=Merhaba,%20acil%203D%20baskı%20ihtiyacım%20var."
       target="_blank" onclick="trackWhatsAppClick('footer', 'acil_buton')">
       WhatsApp’tan Hemen Yaz
     </a>
@@ -807,10 +803,10 @@
         wrapper.addEventListener('click', () => {
           trackWhatsAppClick('galeri', `urun${i} - ${overlay.innerText}`);
 
-          const text = encodeURIComponent(
-            `Merhaba, galerideki urun${i} (${overlay.innerText}) için fiyat almak istiyorum.`
-          );
-          window.open(`https://wa.me/905312084897?text=${text}`, '_blank');
+const text = `Merhaba, galerideki urun${i} (${overlay.innerText}) için fiyat almak istiyorum.`;
+const url = `https://wa.me/905312084897?text=${encodeURIComponent(text)}`;
+window.open(url, '_blank', 'noopener,noreferrer');
+
         });
 
         wrapper.appendChild(img);
@@ -823,6 +819,7 @@
 </body>
 
 </html>
+
 
 
 

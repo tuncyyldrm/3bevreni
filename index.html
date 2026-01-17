@@ -164,14 +164,20 @@
       --text-dim: #4d4d4d;
     }
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-light);
-      overflow-x: hidden;
-      font-size: 16px; /* Bu satırı ekleyin veya güncelleyin */
-    }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text-light);
+  overflow-x: hidden;
+  font-size: 16px; /* Sabit 16px */
+  line-height: 1.6; /* Okunabilirliği artırır */
+}
+
+p {
+  font-size: 1rem; /* 16px'e denk gelir */
+  margin-bottom: 1.5rem;
+}
 
     nav {
       background: var(--card);
@@ -201,8 +207,10 @@
       text-decoration: none;
       font-size: 1rem;
       transition: 0.2s;
+      padding: 10px 5px; /* Tıklama alanını dikeyde genişletir */
+      display: inline-block;
     }
-
+    
     nav .menu a:hover {
       color: var(--accent);
     }
@@ -314,7 +322,10 @@
     }
 
     .btn {
-      display: inline-block;
+      min-height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 15px;
       padding: 12px 22px;
       background: var(--accent);
@@ -329,6 +340,11 @@
       opacity: 0.85;
     }
 
+    .btn:active {
+      transform: scale(0.96); /* Hafifçe içe çökme efekti */
+      opacity: 0.9;
+    }
+    
     footer {
       text-align: center;
       padding: 40px 10px;
@@ -534,8 +550,11 @@
     }
 
     @media (max-width: 768px) {
+      body {
+        font-size: 16px; 
+      }
       .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Mobilde başlık biraz daha dengeli */
       }
 
       .hero p {
@@ -579,17 +598,17 @@
 
   <nav>
     <div class="logo">
-      <a href="https://memonex3d.com/">Memonex</a>
+      <a title="Memonex 3D baskı hizmeti" href="https://memonex3d.com/">Memonex</a>
     </div>
 
     <button class="menu-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">☰</button>
-      <div class="menu">
-        <a href="#hakkinda" title="Memonex 3D baskı hizmeti hakkında detaylı bilgi">Hakkında</a>
-        <a href="#alanlar" aria-label="3D baskı hizmet alanları">Alanlar</a>
-        <a href="#galeri" aria-label="3D baskı örnekleri">Örnekler</a>
-        <a href="#magaza" aria-label="3D baskı ürün mağazası">Mağaza</a>
-        <a href="#iletisim" aria-label="3D baskı iletişim ve fiyat alma">İletişim</a>
-      </div>
+<div class="menu">
+  <a href="#hakkinda" title="Memonex 3D baskı hizmeti hakkında detaylı bilgi" aria-label="3D baskı hakkında">Hakkında</a>
+  <a href="#alanlar" title="3D baskı tasarım ve üretim alanlarımız" aria-label="3D baskı hizmet alanları">Alanlar</a>
+  <a href="#galeri" title="Isparta 3D baskı örnek çalışmalar galerisi" aria-label="3D baskı örnekleri">Örnekler</a>
+  <a href="#magaza" title="Memonex Shopier ve Dolap mağaza bağlantıları" aria-label="3D baskı ürün mağazası">Mağaza</a>
+  <a href="#iletisim" title="3D baskı fiyatı almak için iletişim kanalları" aria-label="3D baskı iletişim ve fiyat alma">İletişim</a>
+</div>
     <button id="themeToggle">🌙 / ☀️</button>
   </nav>
 
@@ -636,7 +655,7 @@
         Örnek çalışmaları incelemek için <a href="#galeri">galeri</a> bölümüne göz atabilir,
         aklındaki fikir için doğrudan iletişime geçebilirsin.
       </p>
-      <a href="#iletisim">Isparta’da tek adet 3D baskı fiyatı</a> için bize yaz.
+      <a href="#iletisim" title="Isparta 3D baskı fiyat teklifi formu">Isparta’da tek adet 3D baskı fiyatı</a> için bize yaz.
 
     </div>
   </section>
@@ -663,8 +682,8 @@
     <div class="box">
       Memonex ürünlerini güvenli ödeme altyapısıyla satın almak için aşağıdaki bağlantıyı kullanabilirsin.
       <br><br>
-      <a class="btn" rel="nofollow noopener" href="https://www.shopier.com/memonex3d" target="_blank">Shopier Satış Sayfasına Git</a>
-      <a class="btn" rel="nofollow noopener" href="https://dolap.com/profil/memonex3d" target="_blank">Dolap Satış Sayfasına Git</a>
+      <a class="btn" rel="nofollow noopener" href="https://www.shopier.com/memonex3d" target="_blank" title="Memonex 3D baskı modellerini Shopier üzerinden satın alın">Shopier Satış Sayfasına Git</a>
+      <a class="btn" rel="nofollow noopener" href="https://dolap.com/profil/memonex3d" target="_blank"title="Memonex 3D baskı modellerini Dolap üzerinden satın alın">Dolap Satış Sayfasına Git</a>
     </div>
   </section>
 
@@ -673,9 +692,10 @@
     <div class="box">
       Proje fikrin mi var? İş birliği mi yapmak istiyorsun? Bana ulaşabilirsin.
       <br><br>
-      <a class="btn" rel="nofollow noopener" href="https://instagram.com/memonex3d" target="_blank">Instagram</a>
-      <a class="btn" rel="nofollow noopener" href="https://tiktok.com/@memonex3d" target="_blank">Tiktok</a>
-      <a class="btn" rel="nofollow noopener" href="https://wa.me/905312084897" target="_blank">WhatsApp</a>
+      <a class="btn" rel="nofollow noopener" href="https://instagram.com/memonex3d" target="_blank" title="Memonex Instagram sayfasını ziyaret edin">Instagram</a>
+      <a class="btn" rel="nofollow noopener" href="https://facebook.com/memonex3d" target="_blank" title="Memonex Facebook sayfasını ziyaret edin">Facebook</a>
+      <a class="btn" rel="nofollow noopener" href="https://tiktok.com/@memonex3d" target="_blank" title="Memonex Tiktok sayfasını ziyaret edin">Tiktok</a>
+      <a class="btn" rel="nofollow noopener" href="https://wa.me/905312084897" target="_blank" title="Memonex WhatsApp sayfasını ziyaret edin">WhatsApp</a>
     </div>
   </section>
 
@@ -820,9 +840,3 @@ window.open(url, '_blank', 'noopener,noreferrer');
 </body>
 
 </html>
-
-
-
-
-
-

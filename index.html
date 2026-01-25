@@ -44,8 +44,9 @@
  
   <!-- Preload -->
   <link rel="preload" href="https://memonex3d.com/assets/logo-memonex3d.jpg" as="image">
-  <link rel="preconnect" href="https://sheets.googleapis.com">
-  <link rel="dns-prefetch" href="https://sheets.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/3d-printer.jpg" as="image">
 
   <!-- Google Analytics / GTAG -->
@@ -153,6 +154,9 @@
       --text-light: #e6e6e6;
       --text-dim: #b5b5b5;
       --max-width: 1200px;
+      /* Başlıklar için Montserrat, metinler için Poppins */
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Poppins', sans-serif;
     }
 
     [data-theme="light"] {
@@ -166,12 +170,18 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--bg);
   color: var(--text-light);
   overflow-x: hidden;
   font-size: 16px; /* Sabit 16px */
   line-height: 1.6; /* Okunabilirliği artırır */
+}
+h1, h2, h3, .logo {
+  font-family: var(--font-heading);
+  font-weight: 800; /* Logodaki kalınlığı yakalamak için */
+  text-transform: uppercase; /* Logodaki gibi büyük harf etkisi için */
+  letter-spacing: 1px;
 }
 
 p {
@@ -199,7 +209,7 @@ p {
 
     nav .menu {
       display: flex;
-      gap: 20px;
+      gap: 10px;
     }
 
     nav .menu a {
@@ -245,7 +255,7 @@ p {
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 40px 20px;
       width: 100%;
       max-width: none;
       margin: auto;
@@ -368,7 +378,7 @@ p {
 
     .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1rem;
     }
 
@@ -838,6 +848,4 @@ window.open(url, '_blank', 'noopener,noreferrer');
     loadGallery();
   </script>
 </body>
-
 </html>
-
